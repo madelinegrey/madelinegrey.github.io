@@ -77,13 +77,13 @@ nav {
 }
 
 #background-pic {
-	/*position: absolute;
-	left: 0vw;
-	top: 10vh;*/
-	max-width: 220%;
+	position: absolute;
+	/*left: 0vw;*/
+	/*top: 10vh;*/
+	/*max-width: 100%;
 	position: absolute;
 	opacity: 0.3;
-	/*max-height: 200vh;*/
+	max-height: 100vh;*/
 }
 
 .text-container h2 {
@@ -305,6 +305,11 @@ nav {
 #thesocialicons {
 	height: 4vh !important;
 	width: 140%;
+}
+
+#thesocialicons a {
+	position: relative;
+	left: 5%;
 }
 
 .social-icons {
