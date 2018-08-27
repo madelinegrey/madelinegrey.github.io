@@ -56,7 +56,7 @@ nav {
 #home {
 	/* box model */
 	position: relative;
-	height: 100vh;
+	height: calc(100vh - 30px);
 	width: 100vw;
 	padding: 0;
 	overflow-x: hidden;
@@ -81,9 +81,6 @@ nav {
 	position: relative;
 	top: 50vh;
 	transform: translateY(-60%);
-}
-
-.container {
 	/* positioning */
 	margin: auto;
 	/* typography */
@@ -91,6 +88,10 @@ nav {
 	text-align: center;
 	color: var(--light-blue);
 	text-shadow: 0.5px 0.5px 0px var(--grey);
+}
+
+.container {
+	
 }
 
 /*#demo-reels-2 {
@@ -149,7 +150,7 @@ nav {
 /* work title */
 #work-title {
 	position: relative;
-	top: 20vh;
+	top: 10vh;
 	text-align: center;
 
 	color: var(--light-blue);
@@ -163,16 +164,14 @@ nav {
 .work-content {
 
 	position: relative;
-	top: 25vh;
-	left: 50vw;
-	transform: translateX(-50%);
+	top: 15vh;
+
 	width: 70%;
-	
 }
 
-.work-content p {
+/*.work-content p {
 	width: 90%;
-}
+}*/
 
 #icon-work {
 	width: 100px;
@@ -188,7 +187,8 @@ nav {
 
 #work-grid {
 	position: relative;
-	top: 30vh;
+	top: 20vh;
+	padding-bottom: 100px;
 
 	color: var(--light-blue);
 	text-shadow: 0.5px 0.5px 0px var(--grey);
@@ -204,7 +204,7 @@ nav {
 	margin-bottom: 10%;
 }
 
-#work-grid .col {
+#work-grid .col-6 {
 	/*border: solid blue 1px;*/
 	margin: 0;
 	padding: 0;
@@ -217,25 +217,6 @@ nav {
 
 .img-thumbnail {
 	background-color: var(--pink) !important;
-}
-
-/* current work section */
-#current-work {
-	position: relative;
-	align-items: center;
-	justify-content: center;
-	padding-bottom: 20vh;
-	height: 40vh;
-
-	color: var(--light-blue);
-	text-shadow: 0.5px 0.5px 0px var(--grey);
-
-	border: solid green 2px;
-}
-
-#current-work h4 {
-	width: 60vw;
-	padding-top: 3vw;
 }
 
 /* other skills ------------ */
@@ -306,26 +287,88 @@ nav {
 	transform: translateY(-50%);
 }
 
+/* footer */
+footer {
+	position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px; /* Set the fixed height of the footer here */
+  line-height: 30px; /* Vertically center the text there */
+}
+
+#my-footer {
+	background-color: var(--light-blue) !important; /*  pink in rgba form - rgba(254,189,223,0.5) */
+}
+
+#foot-container {
+	/* positioning */
+	margin: auto;
+	/* typography */
+	font-family: 'TW Cen MT', Regular;
+	text-align: center;
+}
+
+.container span {
+	color: white !important;
+	text-shadow: 0.5px 0.5px 0px var(--grey) !important;
+} 
+
 /* media queries */
 
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
-/* Small devices (tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
+/* Small devices (tablets, 768px and down) */
+@media only screen and (max-width: 767px) {
+
+	/* nav */
+
+	#sticky-nav {
+		box-shadow: 1px 1px 1px grey;
+	}
 
 	#sticky-nav button {
 		position: relative;
-		top: 10px;
-	} 
+	}
+
+	#sticky-nav ul {
+	}
 
 	#navbarSupportedContent {
-		background-color: rgba(0, 0, 0, 90%) !important;
-		padding-left: 5px;
+		/*background: pink;
+		margin-left: -17px !important;
+		margin-right: -17px !important;
+		padding-left: 17px;*/
+		/*box-shadow: 1px 1px 1px grey;*/
+	}
+
+	/* home */
+
+	#demo-reels-1 {
+		position: relative;
+		transform: translateY(-60%);
 	}
 
 	#demo-reels-1 h1 {
 		margin-top: 20px;
+	}
+
+	/* work */
+	.mb-0 {
+		padding-bottom: 10px;
+	}
+
+	iframe, .media-body {
+		display: block;
+		width: 100%;
+	}
+
+	#work-grid {
+		width: 90%;
+	}
+
+	#currentwork {
+		padding-bottom: 30px;
 	}
 
 }
@@ -338,10 +381,6 @@ nav {
 
 /* smartphones (portrait and landscape) ----------- */
 @media only screen and (max-width: 578px) {
-	#sticknav div {
-		background-color: var(--light-grey);
-		border: 1px solid red;
-	}
 
 	.text-container h1 {
 		/* positioning */
