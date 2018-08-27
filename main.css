@@ -31,6 +31,7 @@ nav {
 #navbarSupportedContent {
 	position: relative;
 	top: 0vh;
+	width: 100%;
 }
 
 /* nav link styles */
@@ -88,10 +89,6 @@ nav {
 	text-align: center;
 	color: var(--light-blue);
 	text-shadow: 0.5px 0.5px 0px var(--grey);
-}
-
-.container {
-	
 }
 
 /*#demo-reels-2 {
@@ -333,14 +330,6 @@ footer {
 	#sticky-nav ul {
 	}
 
-	#navbarSupportedContent {
-		/*background: pink;
-		margin-left: -17px !important;
-		margin-right: -17px !important;
-		padding-left: 17px;*/
-		/*box-shadow: 1px 1px 1px grey;*/
-	}
-
 	/* home */
 	#demo-reels-1 {
 		position: relative;
@@ -392,7 +381,11 @@ footer {
 @media (min-width: @screen-lg-min) { ... }
 
 /* smartphones (portrait and landscape) ----------- */
-@media only screen and (max-width: 578px) {
+@media only screen and (max-width: 577px) {
+
+	#navbarSupportedContent {
+		justify-content: center !important;
+	}
 
 	.text-container h1 {
 		/* positioning */
