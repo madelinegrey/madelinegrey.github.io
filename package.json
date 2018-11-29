@@ -1,0 +1,27 @@
+{
+  "name": "madelinegrey.github.io",
+  "version": "1.0.0",
+  "description": "portfolio-website-jsonpkg",
+  "main": "script.js",
+  "dependencies": {
+    "imagemin": "^6.0.0",
+    "imagemin-webp": "^4.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "webpkg-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madelinegrey/madelinegrey.github.io.git"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "madeline grey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madelinegrey/madelinegrey.github.io/issues"
+  },
+  "homepage": "https://github.com/madelinegrey/madelinegrey.github.io#readme"
+}
