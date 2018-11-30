@@ -4,8 +4,10 @@
   "description": "portfolio-website-jsonpkg",
   "main": "script.js",
   "dependencies": {
+    "fs": "0.0.1-security",
     "imagemin": "^6.0.0",
-    "imagemin-webp": "^4.1.0"
+    "imagemin-webp": "^4.1.0",
+    "sharp": "^0.21.0"
   },
   "devDependencies": {},
   "scripts": {
