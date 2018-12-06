@@ -7,9 +7,12 @@
     "fs": "0.0.1-security",
     "imagemin": "^6.0.0",
     "imagemin-webp": "^4.1.0",
+    "responsive-images-generator": "^0.2.2",
     "sharp": "^0.21.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt-responsive-images": "^1.10.1"
+  },
   "scripts": {
     "test": "webpkg-test"
   },

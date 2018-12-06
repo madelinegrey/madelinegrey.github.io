@@ -20,7 +20,7 @@ $(document).ready(function(){
 		$('.navbar-nav').on('click', '.nav-link', function(e) {
 		  showContent(e.currentTarget.hash);
 		  e.preventDefault();
-		}); 
+		});
 
 		function showWorkContent(selector) {
 			$workContent.hide();
