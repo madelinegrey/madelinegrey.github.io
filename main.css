@@ -1,5 +1,5 @@
 /* set up document */
-body, html {
+:root {
 	/* maximize space */
 	margin: 0;
 	padding: 0;
@@ -42,8 +42,13 @@ span {
 /* body */
 body {
 	height: 100vh;
-	display: flex;
-	flex-direction: column;
+	/* setting up main page */
+	display: grid;
+	grid-template-areas: "logo logo"
+						 "header ."
+						 "main tags";
+	grid-template-rows: 2em 1fr auto;
+	grid-template-columns: 85% 15%;
 }
 
 /* N A V I G A T I O N */
