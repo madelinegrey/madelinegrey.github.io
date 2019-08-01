@@ -5,29 +5,148 @@
 		<title>madeline grey - portfolio website</title>
 
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-		<meta charset="UTF-8">
+		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico" rel="stylesheet">
+		<!-- google fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+		<!-- css link -->
 		<link rel="stylesheet" href="main.css">
 
 	</head>
+
 	<body>
-		<section>
-			<main>
-				<h1>sorry! this website is under maintenance</h1>
-				<h3>in the meantime, you can find me through the links below!</h3>
-				<div class="container">
-					<a href="www.codepen.io/magrey"><img src="images/codepen.png"></a>
-					<a href="www.soundcloud.com/madeline-grey-1"><img src="images/soundcloud.png"></a>
-					<a href="www.twitter.com/eiddamyerg"><img src="images/twitter.png"></a>
+		<nav>
+			<div>
+				<a href="http://wwww.madelinegrey.github.io" class="logo">
+					<img class="logo-img" src="#" alt="logo">
+				</a>
+			</div>
+			<ul>
+				<li>projects</li>
+				<li><a class="menu" href="#">about me</a></li>
+				<li><a class="menu" href="#">resume</a></li>
+			</ul>
+		</nav>
+
+		<section id="not-nav">
+			<section class="sidebar">
+				<div class="sidebar-container">
+					<div id="name-and-desc">
+						<h2>madeline grey</h2>
+						<p>multimedia designer</p>	
+					</div>
+					<div id="social">
+						<ul>
+							<a><img class="tags" src="#" alt="a"></a>
+							<a><img class="tags" src="#" alt="b"></a>
+							<a><img class="tags" src="#" alt="c"></a>
+							<a><img class="tags" src="#" alt="d"></a>
+						</ul>
+					</div>
 				</div>
+				<div id="tags">
+					<ul>
+						<a onclick="showDesigns()" href="#" id="design-tag"><img class="tags" src="#" alt="design"></a>
+						<a onclick="showAudio()" href="#" id="audio-tag"><img class="tags" src="#" alt="audio"></a>
+					</ul>
+				</div>
+			</section>
+
+			<main>
+				<span>
+				<div class="project-block display design">
+					<h2>musical recital prints</h2>
+					<p>lorem ipsum textholder crap idk</p>
+					<ul>
+						<button onclick="showDesigns()">design</button>
+						<button onclick="showDesigns()">design</button>
+						<button onclick="showDesigns()">design</button>
+					</ul>
+					<a href="#">see details</a>
+					<hr>
+				</div>
+				<div class="project-block display design">
+					<h2>her interactive newsletter</h2>
+					<p>lorem ipsum textholder crap idk</p>
+					<ul>
+						<button onclick="showDesigns()">design</button>
+						<button onclick="showDesigns()">design</button>
+						<button onclick="showDesigns()">design</button>
+					</ul>
+					<a href="#">see details</a>
+					<hr>
+				</div>
+				<div class="project-block display design">
+					<h2>marvel studios party invitation</h2>
+					<p>lorem ipsum textholder crap idk</p>
+					<ul>
+						<button onclick="showDesigns()">design</button>
+						<button onclick="showDesigns()">design</button>
+						<button onclick="showDesigns()">design</button>
+					</ul>
+					<a href="#">see details</a>
+					<hr>
+				</div>
+				<div class="project-block display design">
+					<h2>javascript documentation page</h2>
+					<p>lorem ipsum textholder crap idk</p>
+					<ul>
+						<button onclick="showDesigns()">design</button>
+						<button onclick="showDesigns()">design</button>
+						<button onclick="showDesigns()">design</button>
+					</ul>
+					<a href="#">see details</a>
+					<hr>
+				</div>
+				<div class="project-block display design">
+					<h2>github banner ad</h2>
+					<p>lorem ipsum textholder crap idk</p>
+					<ul>
+						<button onclick="showDesigns()">design</button>
+						<button onclick="showDesigns()">design</button>
+						<button onclick="showDesigns()">design</button>
+					</ul>
+					<a href="#">see details</a>
+					<hr>
+				</div>
+				<div class="project-block display design">
+					<h2>survey form page</h2>
+					<p>lorem ipsum textholder crap idk</p>
+					<ul>
+						<button onclick="showDesigns()">design</button>
+						<button onclick="showDesigns()">design</button>
+						<button onclick="showDesigns()">design</button>
+					</ul>
+					<a href="#">see details</a>
+					<hr>
+				</div>
+				<div class="project-block display audio">
+					<h2>audio thing 1</h2>
+					<p>lorem ipsum textholder crap idk</p>
+					<ul>
+						<button onclick="showAudio()">audio</button>
+						<button onclick="showAudio()">audio</button>
+						<button onclick="showAudio()">audio</button>
+					</ul>
+					<a href="#">see details</a>
+					<hr>
+				</div>
+				<div class="project-block display audio">
+					<h2>audio thing 2</h2>
+					<p>lorem ipsum textholder crap idk</p>
+					<ul>
+						<button onclick="showAudio()">audio</button>
+						<button onclick="showAudio()">audio</button>
+						<button onclick="showAudio()">audio</button>
+					</ul>
+					<a href="#">see details</a>
+					<hr>
+				</div>
+				<footer>design inspired by vida zhang, coded by madeline grey</footer>
 			</main>
 		</section>
-		<footer id="my-footer">
-	      <div id="foot-container" class="container">
-	        <span>by maddie x</span>
-	      </div>
-    	</footer>
 	</body>
+	<script src="my-script.js"></script>
 </html>

@@ -1,0 +1,119 @@
+body, html 
+	margin: 0
+	padding: 0
+	height: 100%
+	width: 100%
+
+	font-family: 'Lato', sans-serif;
+
+	--light-blue: #09c0f8
+
+
+/* mixins */
+@mixin lists() {
+	display: flex
+	list-style-type: none
+	justify-content: space-around
+
+
+/* body */
+body 
+	height: 100vh
+	display: flex
+	flex-direction: column
+	overflow-y: hidden
+
+
+/* nav */
+nav 
+	width: 100vw
+
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+
+
+nav>div 
+	flex: 3
+	margin-top: auto
+	margin-bottom: auto
+
+
+nav>div>a 
+	margin-left: 10%
+
+
+
+nav>ul 
+	display: flex
+	flex-direction: row
+	flex: 2
+	text-decoration: none
+	list-style-type: none
+	justify-content: space-around
+
+
+/* not nav */
+#not-nav 
+	display: flex
+	flex-direction: row
+
+
+/* sidebar */
+.sidebar 
+	height: 100vh
+	flex: 2
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+
+#name-and-desc 
+	display: flex
+	flex-direction: column
+	flex: 2
+	justify-content: flex-end
+	align-items: center
+	margin: 0
+	padding: 0
+
+
+#social 
+	flex: 3
+	width: 50%
+
+
+#social>ul 
+	@include lists();
+	padding: 0
+
+
+/* main content */
+main 
+	flex: 4
+	overflow-y: scroll
+
+
+/* footer */
+footer 
+  	bottom: 0
+  	position: absolute
+
+    text-align: center
+  	height: 30px /* Set the fixed height of the footer here */
+  	line-height: 30px /* Vertically center the text there */
+
+
+
+/* media queries */
+@media only screen and (max-width: 900px) {
+	.container a 
+		width: 5%
+	
+
+
+@media only screen and (max-width: 600px) {
+	.container a 
+		width: 10%
+	
