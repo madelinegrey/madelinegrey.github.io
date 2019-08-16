@@ -34,165 +34,98 @@
   	background: #555; 
 }
 
-/* set direction of content so scrollbar can go on opposite side */
-span {
-	direction: ltr;
-}
-
 /* body */
 body {
 	height: 100vh;
 	/* setting up main page */
 	display: grid;
-	grid-template-areas: "logo logo"
-						 "header ."
-						 "main tags";
-	grid-template-rows: 2em 1fr auto;
-	grid-template-columns: 85% 15%;
-}
-
-/* N A V I G A T I O N */
-/* ------------------- */
-
-/* nav */
-nav {
-	/* whole nav bar is centered and set to flex for contents */
-	width: 90vw;
-	margin: auto;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-
-/* logo container */
-nav>div {
-	/* take up whole left side of nav */
-	flex: 3;
-	/* center vertically */
-	margin-top: auto;
-	margin-bottom: auto;
-}
-
-/* logo/link */
-nav>div>a {
-	/* push to left so space from left is similar to right side */
-	margin-left: 10%;
-}
-
-/* main nav links list */
-nav>ul {
-	/* set links in row */
-	display: flex;
-	flex-direction: row;
-	/* set space so it takes up rest of nav, but not more space than logo container */
-	flex: 2;
-	padding: 0;
-	/* get rid of ul decorations */
-	text-decoration: none;
-	list-style-type: none;
-	/* space + center */
-	justify-content: space-around;
-}
-
-/* R E S T  O F  C O N T E N T */
-/* --------------------------- */
-
-/* rest of content */
-#not-nav {
-	/* set up sidebar -> main content layout */
-	/*display: flex;
-	flex-direction: row;*/
-	display: grid;
-
-	grid-template-rows: 100vh 100vh;
-	grid-template-columns: 1fr 2fr;
-
-	grid-template-areas: "sidebar content";
-	/* hide scrolling so scrolling is set for just main content, not sidebar */
-	overflow-y: hidden;
-}
-
-/* S I D E B A R */
-/* ------------- */
-
-.sidebar {
-	grid-area: "sidebar";
-	/* adjust sidebar space within container */
-	height: 100vh;
-	/* adjust sidebar contents positioning */
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-#name-and-desc {
-	/* adjust positioning for name and description */
-	display: flex;
-	flex-direction: column;
-	flex: 2;
-	justify-content: flex-end;
-	align-items: center;
-	margin: 0;
-	padding: 0;
-}
-
-#social {
-	/* adjust space provided for social media links */
-	flex: 1;
-}
-
-#tags {
-	/* adjust space provided for content tags */
-	/* -adjust margin-bottom to make up for header bump that de-centers sidebar content */
-	margin-bottom: 20%;
-	width: 30%;
-}
-
-#social>ul, #tags>ul {
-	/* adjust decoration for list contaieners and set up for content adjustments */
-	padding: 0;
-	display: flex;
-	list-style-type: none;
-	justify-content: space-between;
-}
-
-#tags>ul>a {
-	/* make it so content tags' link containers take up 50% of space each... */
-	width: 50%;
-	text-align: center;
-}
-
-
-/* ... so that they are set up to create a border line between them */
-#design-tag {
-	border-right: 0.5px solid lightgrey;
-}
-
-#audio-tag {
-	border-left: 0.5px solid lightgrey;
+	grid-template-rows: 20px 10% 20% 20% auto;
+	grid-template-columns: 5% 1fr repeat(3, 20%) 100px;
 }
 
 /* M A I N  C O N T E N T */
 /* ---------------------- */
 
-main {
-	grid-area: "content";
-	/* set up scrollbar on left by reversing content relative to span styling */
-	direction: rtl;
-	/* set up container for content */
+.logo-container {
+	grid-area: 1 / 1 / 2 / 7;
+	justify-self: end;
+}
+
+/* H E A D E R */
+/* ----------- */
+
+header {
+	grid-area: 2 / 1 / 5 / 7;
+	display: grid;
+	grid-template-rows: 10vh 30vh 10vh;
+	grid-template-columns: 5% 1fr 2% repeat(3, 20%) 100px;
+}
+
+#main-pic {
+	grid-area: 1 / 2 / 3 / 3;
+	width: 100%;
+	height: 100%;
+	border: 1px solid blue;
+}
+
+header>h1 {
+	grid-area: 1 / 4 / 2 / 5;
+	margin: 0;
+	align-self: center;
+	position: relative;
+	right: 30%;
+
+	font-size: 2.2em;
+}
+
+header>h3 {
+	grid-area: 2 / 4 / 3 / 5;
+	margin: 0;
+	align-self: center;
+
+	font-weight: normal;
+}
+
+#social {
+	grid-area: 3 / 2 / 4 / 3;
+	justify-self: stretch;
+	align-self: center;
+}
+
+#social>ul {
+	margin: 0;
+	padding: 0;
 	display: flex;
-	flex-direction: column;
-	flex: 4;
-	/* reveal scrollbar */
-	overflow-y: scroll;
+	justify-content: space-around;
+}
+
+nav {
+	grid-area: 2 / 5 / 3 / 6;
+	justify-self: right;
+}
+
+nav>ul {
+	list-style-type: none;
+	font-size: 1.5em;
+	text-align: right;
+}
+
+nav>ul>li>a {
+	text-decoration: none;
+}
+
+/* M A I N */
+/* ------- */
+
+main {
+	grid-area: 5 / 2 / 6 / 6;
 }
 
 .project-block {
 	/* adjust spacing of project containers */
 	padding: 3vh 0;
 	width: 75%;
-	margin: auto;
+	margin: 0;
 }
 
 hr {
@@ -213,29 +146,62 @@ hr {
 	justify-content: space-between;
 }
 
+/* T A G S */
+/* ------- */
+
+#tags {
+	grid-area: 5 / 6 / 7 / 7;
+}
+
+#tags>ul {
+	padding: 0;
+	display: grid;
+	grid-template-rows: auto auto auto auto;
+	grid-template-columns: 25% 75%;
+	align-items: center;
+	position: sticky;
+	z-index: 1;
+	top: 20%;
+}
+
+#gd-tag {
+	grid-area: 1 / 1 / 2 / 2;
+}
+
+#gd {
+	grid-area: 1 / 2 / 2 / 3;
+}
+
+#ui-tag {
+	grid-area: 2 / 1 / 3 / 2;
+}
+
+#ui {
+	grid-area: 2 / 2 / 3 / 3;
+}
+
+#audio-tag {
+	grid-area: 3 / 1 / 4 / 2;
+}
+
+#audio {
+	grid-area: 3 / 2 / 4 / 3;
+}
+
+
+
 /* F O O T E R */
 /* ----------- */
 
 footer {
   	bottom: 0;
   	width: 75%;
-  	margin: auto;
+  	margin: 0;
   	padding-bottom: 3vh;
     text-align: left;
   	height: 30px; /* set the fixed height of the footer here */
   	line-height: 30px; /* vertically center the text there */
 }
-
-/* T A G  I N T E R A C T I O N */
-/* ---------------------------- */
-
-/*.display {
-	display: block;
-}
-
-.hide {
-	display: none;
-}*/
 
 /* M E D I A  Q U E R I E S */
 /* ------------------------ */

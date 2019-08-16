@@ -17,16 +17,16 @@
 	</head>
 
 	<body>
-		<a href="http://wwww.madelinegrey.github.io" class="logo">
-			<img class="logo-img" src="#" alt="logo">
-		</a>
+		<div class="logo-container">
+			<a href="http://wwww.madelinegrey.github.io" class="logo">
+				<img class="logo-img" src="#" alt="logo">
+			</a>
+		</div>
 
 		<header>
-			<img src="images/newprofeshpic.jpg" alt="digital illustration of madeline grey">
-			<div id="name-and-desc">
-				<h1>madeline grey</h1>
-				<h2>insert some description here lorem ipsum idk charlie bark brak frikety frack fdjkla;fj jfdkla; fej ajfkd; ake ajlfdjafeja fdlk eaiof jdksla fjeaiw fekl afkld fjeiaodf;lkafjeawo;</h2>	
-			</div>
+			<img src="images/newprofeshpic.jpg" id="main-pic" alt="digital illustration of madeline grey">
+			<h1>madeline grey</h1>
+			<h3>insert some description here lorem ipsum idk charlie bark brak frikety frack fdjkla;fj jfdkla; fej ajfkd; ake ajlfdjafeja fdlk eaiof jdksla fjeaiw fekl afkld fjeiaodf;lkafjeawo;</h3>
 			<div id="social">
 				<ul>
 					<a><img class="tags" src="#" alt="a"></a>
@@ -133,18 +133,18 @@
 				<a href="#">see details</a>
 				<hr>
 			</div>
-			<section>
-				<ul>
-					<input type="checkbox" id="gd-tag" name="gd-tag" value="checked">
-					<label for="gd-tag">graphic design</label>
-					<input type="checkbox" id="ui-tag" name="ui-tag" value="checked">
-					<label for="ui-tag">ui</label>
-					<input type="checkbox" id="audio-tag" name="audio-tag" value="checked">
-					<label for="audio-tag">audio</label>
-				</ul>
-			</section>
 			<footer>coded and designed by madeline grey</footer>
 		</main>
+		<section id="tags">
+			<ul>
+				<input type="checkbox" id="gd-tag" name="gd-tag" value="checked">
+				<label for="gd-tag" id="gd">graphic design</label>
+				<input type="checkbox" id="ui-tag" name="ui-tag" value="checked">
+				<label for="ui-tag" id="ui">ui</label>
+				<input type="checkbox" id="audio-tag" name="audio-tag" value="checked">
+				<label for="audio-tag" id="audio">audio</label>
+			</ul>
+		</section>
 	</body>
 	<script src="my-script.js"></script>
 </html>
