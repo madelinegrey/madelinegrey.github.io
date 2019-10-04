@@ -67,6 +67,7 @@ header {
 	width: 100%;
 	height: 100%;
 	border: 1px solid blue;
+	object-fit: cover;
 }
 
 header>h1 {
@@ -163,7 +164,7 @@ hr {
 	align-items: end;
 	position: sticky;
 	z-index: 1;
-	top: 20%;
+	top: 5%;
 }
 
 input[type = checkbox] {
@@ -218,6 +219,23 @@ footer {
 /* tablet sizes */
 @media only screen and (max-width: 1020px) {
 
+	/* make sure body takes up full viewport space */
+	body {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		width: 100%;
+	}
+
+	header {
+		grid-template-rows: 10vh 30vh 10vh;
+		grid-template-columns: 5% 30% 2% repeat(2, 30%) 5%;
+	}
+
+	.logo-container {
+		padding-right: 3%;
+	}
+
 	/* nav adjustments */
 	/* - make nav links take up more space */
 	nav>div>a {
@@ -232,74 +250,8 @@ footer {
 		flex: 3;
 	}
 
-	/* put sizebar in column with rest of content */
-	/*#not-nav {
-		flex-direction: column;
-		direction: rtl;
-		overflow-y: scroll;
-	}*/
-
-	#not-nav {
-		direction: rtl;
-		overflow-y: scroll;
-		overflow-x: hidden;
-
-		display: grid;
-
-		grid-template-rows: 100vh auto;
-		grid-template-columns: calc(100vw - 10px);
-
-		grid-template-areas: "header"
-							 "content";
-		
-	}
-
-	/* adjust sidebar so spacing matches rest of content in column */
-	.sidebar {
-		grid-area: "header";
-		/*width: 80%;
-		margin: auto;*/
-		display: grid;
-
-		grid-template-rows: 100%;
-		grid-template-columns: 50% 50%;
-
-		grid-template-areas: "left right";
-
-		align-items: flex-start;
-		direction: ltr;
-		overflow: auto;
-		padding-bottom: 3vh;
-		border-bottom: 1px solid lightgrey;
-	}
-
-	.sidebar-container {
-		grid-area: "left";
-		justify-self: center;
-		align-self: center;
-		transform: translateY(-50%);
-	}
-
-	/* make sidebar content sit on the left */
-	#name-and-desc {
-		align-items: flex-start;
-	}
-
 	#social {
 		width: 80%;
-	}
-
-	#tags {
-		grid-area: "right";
-		justify-self: center;
-		align-self: center;
-		transform: translateY(-50%);
-	}
-
-	/* scrollbar adjustments */
-	main {
-		grid-area: "content";
-		overflow: visible;
 	}
 
 	.project-block {
@@ -314,38 +266,24 @@ footer {
 /* phone sizes */
 @media only screen and (max-width: 740px) {
 
-	.sidebar-container {
-		width: 90%;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
+	body {
+		grid-template-columns: 5% 1fr repeat(3, 20%) 100px;
 	}
 
-	#name-and-desc>p {
-		width: 100%;
-		text-align: right;
+	header>h3 {
+		font-size: 0.8em;
 	}
 
-	#tags>ul {
-		flex-direction: column;
-		height: 100%;
-		justify-content: space-between;
-		align-items: center;
-		margin: 0;
+	.logo-container {
+		padding-right: 5%;
+	}
+
+	nav {
+		padding-right: 5%;
 	}
 
 	#tags {
-		width: 90%;
-		height: 10%;
-		transform: translateY(-85%);
-	}
-
-	#design-tag {
-		border-right: initial;
-	}
-
-	#audio-tag {
-		border-left: initial;
+		padding-right: 5%;
 	}
 
 	footer {
@@ -354,14 +292,6 @@ footer {
 }
 
 @media only screen and (max-width: 740px) and (orientation: landscape) {
-
-	#not-nav {
-		grid-template-rows: 100vh auto;
-	}
-
-	.sidebar-container{
-		transform: translateY(-25%);
-	}
 
 	footer {
 		padding-bottom: 3%;
