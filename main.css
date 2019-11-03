@@ -7,10 +7,15 @@
 	width: 100%;
 
 	/* base font for now */
-	font-family: 'Lato', sans-serif;
+	font-family: 'Roboto Slab', serif; /*'Lato', sans-serif*/
 
 	/* color variables */
-	--light-blue: #09c0f8;
+	--light-blue: #009CEE;
+	--dark-blue: #1B306C;
+	--my-yellow: #FCFE00;
+	--bright-red: #F50040; 
+
+	color: var(--dark-blue);
 }
 
 /* scrollbar adjustments */
@@ -39,7 +44,7 @@ body {
 	height: 100vh;
 	/* setting up main page */
 	display: grid;
-	grid-template-rows: 20px 10% 20% 20% auto;
+	grid-template-rows: 50px 10% 20% 20% auto;
 	grid-template-columns: 5% 1fr repeat(3, 20%) 200px;
 }
 
@@ -66,7 +71,8 @@ header {
 	grid-area: 1 / 2 / 3 / 3;
 	width: 100%;
 	height: 100%;
-	border: 1px solid blue;
+	border: 1px solid var(--dark-blue);
+	border-right-style: none;
 	object-fit: cover;
 }
 
@@ -76,7 +82,9 @@ header>h1 {
 	align-self: center;
 	position: relative;
 	right: 30%;
-
+	justify-self: center;
+	padding: 2% 4% 2% 4%;
+	font-family: 'Lato', sans-serif;
 	font-size: 2.2em;
 }
 
@@ -99,11 +107,21 @@ header>h3 {
 	padding: 0;
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
+}
+
+#social>ul>a {
+	text-align: center;
+}
+
+#social>ul>a>img {
+	width: 25%;
 }
 
 nav {
 	grid-area: 2 / 5 / 3 / 6;
 	justify-self: right;
+	align-self: center;
 }
 
 nav>ul {
@@ -112,8 +130,23 @@ nav>ul {
 	text-align: right;
 }
 
-nav>ul>li>a {
+nav>ul>li>object>a {
 	text-decoration: none;
+	z-index: 2;
+	color: var(--dark-blue);
+}
+
+nav>ul>li>object>a:hover {
+	font-size: 1.2em;
+}
+
+nav>ul>li>object>a:visited {
+	font-size: 1.2em;
+	color: grey;
+}
+
+.logo>img {
+	width: 50px;
 }
 
 /* M A I N */
@@ -130,6 +163,10 @@ main {
 	margin: 0;
 }
 
+.project-block h2 {
+	margin-top: 0;
+}
+
 hr {
 	/* create border line between project blocks */
 	width: 100%;
@@ -142,10 +179,41 @@ hr {
 .project-block>ul {
 	/* adjust spacing and decoration of project block list of tags */
 	display: flex;
-	width: 30%;
+	width: 40%;
 	padding: 0;
 	list-style-type: none;
 	justify-content: space-between;
+}
+
+.project-block>img {
+	width: 800px;
+	height: 500px;
+	object-fit: cover;
+	object-position: right top;
+}
+
+.project-block span {
+	font-size: 0.9em;
+	background-color: var(--dark-blue);
+	padding: 2% 5%;
+	border-radius: 3%;
+	color: white;
+}
+
+.see-details {
+	width: 85%;
+	object-fit: contain;
+}
+
+.see-details-container-link {
+	display: inline-block;
+	width: 11vw;
+	height: 11vh;
+}
+
+.see-details:hover {
+	width: 90%;
+	object-fit: contain;
 }
 
 /* T A G S */
@@ -153,22 +221,47 @@ hr {
 
 #tags {
 	grid-area: 5 / 6 / 7 / 7;
+	padding: 3vh 0;
 }
 
 #tags>ul {
-	padding: 0;
+	padding: 1vh 0;
 	display: grid;
 	grid-template-rows: auto auto auto auto;
 	grid-template-columns: 75% 25%;
 	grid-row-gap: 10%;
 	align-items: end;
 	position: sticky;
-	z-index: 1;
 	top: 5%;
+	z-index: 1;
+	margin-top: 0;
 }
 
-input[type = checkbox] {
-	padding: 0px;
+.all-the-tags input[type="checkbox"] {
+	padding: 0px; 
+	opacity: 0.5;
+}
+
+.all-the-tags input[type="checkbox"]:hover {
+	box-shadow: 0px 0px 4px grey;
+}
+
+.all-the-tags input + label {
+	background-image: url(images/checkmark-blank_1@2x.png);
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding-right: 25%;
+	width: 100%;
+}
+
+.all-the-tags input[type="checkbox"]:checked + label {
+	background-image: url(images/checkmark-filled@2x.png);
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding-right: 25%;
+	width: 100%;
 }
 
 #design-tag {
@@ -211,6 +304,10 @@ footer {
     text-align: left;
   	height: 30px; /* set the fixed height of the footer here */
   	line-height: 30px; /* vertically center the text there */
+}
+
+footer>img {
+	width: 5%;
 }
 
 /* M E D I A  Q U E R I E S */

@@ -1,3 +1,5 @@
+
+
 // get container of all the tags a user can choose from
 // const checkBoxes = document.querySelector('.all-the-tags');
 const allBoxes = document.querySelectorAll('input[type=checkbox]');
@@ -19,7 +21,6 @@ function toggleChecked(event) {
 	for (var i = 0; i < allBoxes.length; i++) {
 		console.log("in again: " + allBoxes[i].checked);
 		if (allBoxes[i].checked == true) {
-			// return the id
 			console.log(allBoxes[i].id);
 			// get list of corresponding projects
 			const projects = document.querySelectorAll("." + allBoxes[i].id);

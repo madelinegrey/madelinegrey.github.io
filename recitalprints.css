@@ -1,0 +1,39 @@
+body {
+	grid-template-rows: 20px 10% 20% 20% 3fr;
+}
+
+main {
+	padding-top: 5%;
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: repeat(2, 50%);
+	grid-gap: 20px;
+	justify-items: center;
+	grid-area: 5 / 2 / 6 / 7;
+	width: calc(100% - 20px);
+}
+
+main>h1 {
+	white-space: pre-line;
+	justify-self: start;
+}
+
+main>h3 {
+	align-self: center;
+	margin: 5%;
+}
+
+main>h4 {
+	align-self: center;
+}
+
+section>img {
+	width: 100%;
+	object-fit: contain;
+}
+
+#text-container {
+	position: sticky;
+	z-index: 1;
+	top: 10%;
+}
