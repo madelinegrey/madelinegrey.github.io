@@ -437,7 +437,12 @@ footer>img {
 	}
 
 	.all-the-tags input[type="checkbox"]:checked + label {
-		padding-right: 23%;
+		padding-right: 25px;
+		background-image: none;
+	}
+
+	.all-the-tags input + label {
+		background-image: none;
 	}
 
 	#design-tag {
@@ -494,14 +499,7 @@ footer>img {
 		grid-template-columns: 50% 10% 30% 10%;
 	}
 
-	.all-the-tags input[type="checkbox"]:checked + label {
-		padding-right: 25px;
-		background-image: none;
-	}
 
-	.all-the-tags input + label {
-		background-image: none;
-	}
 }
 
 /* Only stick if you can fit */
