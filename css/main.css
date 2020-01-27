@@ -401,6 +401,10 @@ footer>img {
 		padding-right: 5%;
 	}
 
+	#social {
+		padding-top: 50%;
+	}
+
 	#social>ul>a>img {
 		width: 40%;
 	}
@@ -511,6 +515,15 @@ footer>img {
 }
 
 @media only screen and (max-width: 740px) and (orientation: landscape) {
+
+	.all-the-tags input[type="checkbox"]:checked + label {
+		padding-right: 25px;
+		background-image: none;
+	}
+
+	.all-the-tags input + label {
+		background-image: none;
+	}
 
 	footer {
 		padding-bottom: 3%;
