@@ -63,3 +63,17 @@ function navScroll(mediaQ) {
 		console.log("unsticked");
 	}
 }
+
+const lightBlue = '009CEE';
+const yellow = 'FCFE00';
+const brightRed = 'F50040';
+// color generator
+function colorGen() {
+	var rects = document.querySelectorAll('.rect');
+	var colors = [lightBlue, yellow, brightRed];
+	for (var i = 0; i < rects.length; i++) {
+		rects[i].style.backgroundColor = "#" + colors[Math.floor(Math.random()*colors.length)];
+	}
+}
+
+colorGen();
